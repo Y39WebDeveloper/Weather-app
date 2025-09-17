@@ -1,0 +1,49 @@
+.dots-loader {
+  /* ... container styling ... */
+  position: relative;
+  width: 20px;
+  aspect-ratio: 1;
+}
+
+.dot {
+  /* ... dot styling ... */
+  position: absolute; /* or other positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: dot-rotate 2.1s infinite linear;
+  width: 3px;
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Stagger animation for individual dots */
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.dot:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.dot:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.dot:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.dot:nth-child(7) {
+  animation-delay: 1.8s;
+}
+/* ... and so on for more dots */
+
+@keyframes dot-rotate {
+  0% {
+    transform: rotate(0deg) translateX(10px); /* Initial position and rotation */
+  }
+  100% {
+    transform: rotate(360deg) translateX(10px); /* Final position and rotation */
+  }
+}

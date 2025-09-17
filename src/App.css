@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'DMSans';
+  src: url("/assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: 'Bricolage';
+  src: url("/assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+}
+
+@theme{
+  --font-bricolage: 'Bricolage', serif;
+
+  --text-*: initial;
+  --text-1: 96px;
+  --text-1--line-height: 100%;
+  --text-1--letter-spacing: -2px;
+  --text-1--font-weight: 600;
+
+  --text-2: 52px;
+  --text-2--line-height: 120%;
+  --text-2--letter-spacing: 0px;
+  --text-2--font-weight: 700;
+
+  --text-3: 32px;
+  --text-3--line-height: 100%;
+  --text-3--letter-spacing: 0px;
+  --text-3--font-weight: 300;
+
+  --text-4: 28px;
+  --text-4--line-height: 120%;
+  --text-4--letter-spacing: 0px;
+  --text-4--font-weight: 700;
+
+  --text-5: 20px;
+  --text-5--line-height: 120%;
+  --text-5--letter-spacing: 0px;
+  --text-5--font-weight: 600;
+
+  --text-6: 18px;
+  --text-6--line-height: 120%;
+  --text-6--letter-spacing: 0px;
+  --text-6--font-weight: 500;
+
+  --text-7: 16px;
+  --text-7--line-height: 120%;
+  --text-7--letter-spacing: 0px;
+  --text-7--font-weight: 500;
+
+  --text-8: 14px;
+  --text-8--line-height: 120%;
+  --text-8--letter-spacing: 0px;
+  --text-8--font-weight: 500;
+
+  --color-*: initial;
+  --color-neutral-0: #fff;
+  --color-neutral-200: #D4D3D9;
+  --color-neutral-300: #ACACB7;
+  --color-neutral-600: #3C3B5E;
+  --color-neutral-700: #302F4A;
+  --color-neutral-800: #262540;
+  --color-neutral-900: #02012C;
+  --color-orange-500: #FF8A00;
+  --color-blue-500: #4658D9;
+  --color-blue-700: #2B1B9C;
+}
+
+
+body{
+  font-family: 'DMSans', sans-serif;
+  background-color: var(--color-neutral-900);
+  min-height: 100vh;
+}
