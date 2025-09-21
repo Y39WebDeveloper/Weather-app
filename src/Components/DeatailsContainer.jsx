@@ -2,13 +2,13 @@ import { useContext } from 'react'
 import { MeteoContext } from '../Contexts/MeteoContext'
 
 function DeatailsContainer() {
-  const {meteoData} = useContext(MeteoContext)
+  const {meteoData, isMetric} = useContext(MeteoContext)
   return (
     <div className='grid grid-cols-2 gap-4 md:flex md:justify-center md:items-center md:gap-5 lg:gap-6'>
         <DetailsCard label="Feels Like" value={meteoData?.current.apparent_temperature} unit={"°"}/>
         <DetailsCard label="Humidity" value={meteoData?.current.relative_humidity_2m} unit={"%"}/>
-        <DetailsCard label="Wind" value={meteoData?.current.wind_speed_10m} unit={" km/h"}/>
-        <DetailsCard label="Precipitation" value={meteoData?.current.precipitation} unit={" mm"}/>
+        <DetailsCard label="Wind" value={meteoData?.current.wind_speed_10m} unit={isMetric ? " km/h" : " mph"}/>
+        <DetailsCard label="Precipitation" value={meteoData?.current.precipitation} unit={isMetric ? " mm" : " inch"}/>
     </div>
   )
 }
